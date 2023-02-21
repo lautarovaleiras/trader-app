@@ -1,0 +1,24 @@
+
+    
+<h1>Nueva cuenta</h1>
+
+<form [formGroup]="accountForm" (ngSubmit)= "onSubmit()" >
+
+    <mat-form-field class="fields-input">
+      <mat-label>Eliga una moneda</mat-label>
+        <select matNativeControl formControlName="type" name="currency">
+            <option *ngFor="let currency of currency_types" [value]="currency.currencyISO">
+              {{currency.CurrencyName}}
+            </option>
+          </select>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="accent"> Crear </button>
+
+</form>  
+     
+    
+  
+  
+
+  

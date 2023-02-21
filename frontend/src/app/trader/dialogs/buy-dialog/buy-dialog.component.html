@@ -1,0 +1,21 @@
+<h1>{{data.type == 'ARS'? 'Depositar Pesos' : 'Comprar ' + data.type}}</h1>
+
+<form [formGroup]="accountForm" (ngSubmit)= "onSubmit()" >
+
+    <mat-form-field class="fields-input" *ngIf="data.type !=='ARS'">
+        <mat-label>Elige una cuenta</mat-label>
+        <select matNativeControl formControlName="typeAccount" aria-placeholder="Elige una cuenta " name="sourceAccount">
+            <option *ngFor="let account of accounts" [value]="account.id">
+              {{account.type}}
+            </option>
+          </select>
+     </mat-form-field>
+
+     <mat-form-field class="fields-input">
+        <input type="number" matInput placeholder="Monto" formControlName="amount" required>
+    </mat-form-field>
+
+    <button type="submit" mat-raised-button color="accent"> {{data.type == 'ARS'? 'Depositar' : 'Comprar '}} </button>
+
+</form>  
+     

@@ -1,0 +1,31 @@
+<div class="signup-container">
+    <mat-card>
+      <mat-card-content>
+        <h1>Registro</h1>
+  
+        <form [formGroup]="signUpForm" (ngSubmit)= "onSignUp()" >
+
+            <mat-form-field class="fields-input">
+                <input type="email" matInput placeholder="Email" formControlName="email" required>
+            </mat-form-field>
+  
+            <mat-form-field class="fields-input">
+                <input type="text" matInput placeholder="Nombre" formControlName="firstName" required>
+            </mat-form-field>
+
+            <mat-form-field class="fields-input">
+                <input type="text" matInput placeholder="Apellido" formControlName="lastName" required>
+            </mat-form-field>
+  
+            <mat-form-field class="fields-input">
+                <input type="password" matInput placeholder="Password" formControlName="password" required>
+            </mat-form-field>
+
+  
+            <button type="submit" mat-raised-button color="accent" [disabled]="signUpForm.invalid"> Registrarse </button>
+  
+        </form>  
+      </mat-card-content>
+    </mat-card>
+  
+  </div>

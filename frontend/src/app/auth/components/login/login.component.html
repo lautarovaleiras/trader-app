@@ -1,0 +1,25 @@
+<div class="login-container">
+  <mat-card>
+    <mat-card-content>
+      <h1>Login</h1>
+
+      <form [formGroup]="loginForm" (ngSubmit)= "onLogin()" >
+
+        <mat-form-field class="fields-input">
+          <input type="email" matInput placeholder="Email" formControlName="email" required>
+        </mat-form-field>
+
+        <mat-form-field class="fields-input">
+          <input type="password" matInput placeholder="Password" formControlName="password" required>
+        </mat-form-field>
+
+        <button type="submit" mat-raised-button color="accent" [disabled]="loginForm.invalid">Iniciar Session</button>
+
+      </form>
+      
+        <a routerLink="/signup">Registrarse</a>
+        
+    </mat-card-content>
+  </mat-card>
+
+</div>

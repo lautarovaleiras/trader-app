@@ -1,0 +1,10 @@
+{
+    "type": "sqlite",
+    "database": "database.sqlite",
+    "entities":["dist/entities/**/*.js"],
+    "migrations": [
+        "dis/migrations/**/*.js"
+      ],
+    "synchronize": true
+
+ }

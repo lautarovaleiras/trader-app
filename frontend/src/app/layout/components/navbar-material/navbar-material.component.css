@@ -1,0 +1,48 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top:60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+mat-card-header{
+  display: grid;
+  text-align: center;
+}
+.example-header-image{
+  width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.example-sidenav-content {
+  display: inline;
+  height: 100%;
+  margin: 3%;
+  /* align-items: center;
+  justify-content: center; */
+}
+.example-sidenav {
+  user-select: none;
+}
+.full-width {
+  width: 100%;
+}
+.menu-button {
+  transition: 300ms ease-in-out;
+  transform: rotate(0deg);
+}
+.menu-button.rotated {
+  transform: rotate(180deg);
+}
+.submenu {
+  overflow-y: hidden;
+  transition: transform 300ms ease;
+  transform: scaleY(0);
+  transform-origin: top;
+  padding-left: 30px;
+}
+.submenu.expanded {
+  transform: scaleY(1);
+}
